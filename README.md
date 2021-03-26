@@ -1,2 +1,4 @@
 # scorecards
-create reports from documentation
+
+Create reports from documentation.
+

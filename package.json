@@ -1,0 +1,25 @@
+{
+  "name": "scorecards",
+  "description": "create reports from documentation",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwright/scorecards.git"
+  },
+  "author": "pwright",
+  "license": "MIT",
+  "bin": {
+    "scorecards": "./index.js"
+  },
+  "homepage": "https://github.com/pwright/scorecards#readme",
+  "dependencies": {
+    "match-extension": "^0.2.1",
+    "private": "^0.1.8",
+    "replace-in-file": "^6.1.0",
+    "yargs": "^16.2.0"
+  }
+}
