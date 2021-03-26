@@ -10,22 +10,29 @@ const argv = require("yargs").command(
   function ({ source, testname }) {
     console.log({ source, testname });
     try{
-    //exec(`rm -r playground/*`, {});
-    //exec(`mkdir playground/temp/`, {});
-    //exec(`cp -r ${source} playground/temp/${source}`, {});
+    exec(`mkdir playground/`, {});
+    
     }
     catch (e) {
-      console.log("not able to copy")
+      
+      console.log("playground exists? deleting and recreating")
+      exec(`rm -r playground/`, {});
+      exec(`mkdir playground/`, {});
+      
     }
+    exec(`cp -r ${source} playground/`, {});
     switch (testname) {
       case 'accessibility':
         console.log('testing accessibility.');
         autosubs.accessibility();
         break;
-      case 'Mangoes':
-      case 'Papayas':
-        console.log('Mangoes and papayas are $2.79 a pound.');
-        // expected output: "Mangoes and papayas are $2.79 a pound."
+      case 'wordcount':
+        console.log('creates docs that work better for wc.');
+        autosubs.wordcount();
+        break;
+
+      case 'titles':
+        console.log('creating csv of titles.');
         break;
       default:
         console.log(`Running all tests, because testname is ${testname}.`);
