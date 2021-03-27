@@ -7,13 +7,13 @@ link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/skupper.
 [cols="1,1,1"]
 |===
 
-a|Alt text
+a|.Images
 
 winclude::select * from images.csv[win-alt-text]
-|Column 2 
-|Column 3
+|Links 
+|Tables
 
-|This column has a proportional width of 6
-|This column has a proportional width of 1
-|This column has a proportional width of 2
+|Assemblies
+|Keywords
+| 
 |===
