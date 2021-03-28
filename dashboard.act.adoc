@@ -9,7 +9,7 @@ link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/skupper.
 
 a|.Images
 
-winclude::select * from images.csv[win-alt-text]
+query::select * from images.csv[win-alt-text]
 |Links 
 |Tables
 
