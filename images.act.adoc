@@ -1,0 +1,9 @@
+= Images report
+
+[.text-center]
+xref::getting-started.adoc[Getting started] 
+link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/images.act.adoc.didact.adoc[Refresh]
+
+
+
+include::images.csv[]

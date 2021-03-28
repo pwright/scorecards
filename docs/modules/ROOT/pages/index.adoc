@@ -1,4 +1,18 @@
 include::{mod-loc}attributes.adoc[]
-= Scorecard Documentation
+= Scorecards Documentation
+
+NOTE: Currently, this doc is used to test scorecards, and doesn't provide documentation for using scorecards.
+
+== Images
+
+Scorecards tests for images that don't include alt text, eg
+
+image:https://skupper.io/images/skupper-logo.svg[]
+
+That method isn't foolproof, eg
+
+image:https://skupper.io/images/skupper-logo.svg[width=10%]
+
+
 
 

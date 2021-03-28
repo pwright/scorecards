@@ -8,11 +8,11 @@ var autosubs = require('./substitutions');
 const exec = require("child_process").execSync;
 
 const argv = require("yargs").command(
-  "$0 <source> [test name]",
+  "$0 <category> [test name]",
   "the default command",
   () => {},
-  function ({ source, testname }) {
-    console.log({ source, testname });
+  function ({ category, testname }) {
+    console.log({ category, testname });
     try{
     exec(`mkdir playground/`, {});
     
