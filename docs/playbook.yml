@@ -1,0 +1,21 @@
+site:
+  title: Scorecards
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: https://pwright.github.io/scorecards
+  start_page: scorecards::index.adoc
+content:
+  sources:
+  - url: ../
+    branches: HEAD
+    start_path: docs
+
+ui:
+  bundle:
+    url: ./ui-preview-bundle.zip
+    snapshot: true
+
+asciidoc:
+  attributes:
+    plantuml-server-url: 'http://www.plantuml.com/plantuml'
+    plantuml-fetch-diagram: true
+    mod-loc: ROOT:partial$

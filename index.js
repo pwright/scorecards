@@ -1,5 +1,9 @@
 #!/usr/bin/env node
-//var matchExt = require("match-extension");
+var fs = require('fs')
+  , ini = require('ini')
+
+var config = ini.parse(fs.readFileSync('./config.ini', 'utf-8'))
+
 var autosubs = require('./substitutions');
 const exec = require("child_process").execSync;
 
@@ -20,7 +24,7 @@ const argv = require("yargs").command(
       exec(`mkdir playground/`, {});
       
     }
-    exec(`cp -r ${source} playground/`, {});
+    exec(`cp -r ${config.doc.source_dir} playground/`, {});
     switch (testname) {
       case 'accessibility':
         console.log('testing accessibility.');

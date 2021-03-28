@@ -1,0 +1,4 @@
+include::{mod-loc}attributes.adoc[]
+= Scorecard Documentation
+
+
