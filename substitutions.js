@@ -1,17 +1,22 @@
-// searches for accessibility issues
-exports.accessibility = function () {
+// searches for images issues
+exports.images = function () {
   const replace = require("replace-in-file");
   const alasql = require("alasql");
+  const fs= require("fs")
 
-  // get file to process
+  console.log("searching for alt text: ");
 
-  console.log("processing: ");
+  fs.writeFileSync("images.csv", "image,altText,filename\n");
 
   //set up the substitution
   const options = {
     files: 'playground/**/*.adoc',
-    from: /image::.*\[\]/g,
-    to: 'dummy',
+    from: /image:(.*)\[(.*)\]/g,
+    to: (...args) => {
+
+      fs.appendFileSync("images.csv", args[1]+","+args[2]+","+args.pop() +"\n");
+      return 'dummy';
+    },
     countMatches: true,
     dry: true,
     };
@@ -20,10 +25,8 @@ exports.accessibility = function () {
 
   try {
     const results = replace.sync(options);
-    var res = alasql('SELECT * into CSV("output.csv") FROM ? where numMatches >0',[results]);
-
-
-    console.log("Results:", results);
+    var res = alasql('SELECT * into CSV("results-images.csv") FROM ?',[results]);
+    //console.log("Results:", results);
   } catch (error) {
     console.error("Error occurred:", error);
   }
@@ -32,34 +35,35 @@ exports.accessibility = function () {
   return Date();
 };
 
-// searches for accessibility issues
-exports.wordcount = function () {
+// searches for links issues
+exports.links = function () {
   const replace = require("replace-in-file");
   const alasql = require("alasql");
+  const fs= require("fs")
 
-  // get file to process
+  console.log("searching for links: ");
 
-  console.log("processing: ");
+  fs.writeFileSync("links.csv", "link,descText,filename\n");
 
   //set up the substitution
-
-  const regex = new RegExp('^----.*?^----', 'mgs');
   const options = {
     files: 'playground/**/*.adoc',
-    from: regex,
-    to: '',
+    from: /link:(.*)\[(.*)\]/g,
+    to: (...args) => {
+
+      fs.appendFileSync("links.csv", args[1]+","+args[2]+","+args.pop() +"\n");
+      return 'dummy';
+    },
     countMatches: true,
-    //dry: true,
+    dry: true,
     };
 
   //perform the substitution
 
   try {
     const results = replace.sync(options);
-    var res = alasql('SELECT * into CSV("output.csv") FROM ? where numMatches >0',[results]);
-
-
-    console.log("Results:", results);
+    var res = alasql('SELECT * into CSV("results-links.csv") FROM ?',[results]);
+    //console.log("Results:", results);
   } catch (error) {
     console.error("Error occurred:", error);
   }

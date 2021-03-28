@@ -1,11 +1,11 @@
-= Images report
+= Links report
 
 [.text-center]
 link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/dashboard.act.adoc.didact.adoc[Dashboard]
-link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/images.act.adoc.didact.adoc[Refresh]
+link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/links.act.adoc.didact.adoc[Refresh]
 
 
 [format="csv", options="header"]
 |===
-include::images.csv[]
+include::links.csv[]
 |===

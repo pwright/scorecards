@@ -26,9 +26,9 @@ const argv = require("yargs").command(
     }
     exec(`cp -r ${config.doc.source_dir} playground/`, {});
     switch (testname) {
-      case 'accessibility':
-        console.log('testing accessibility.');
-        autosubs.accessibility();
+      case 'images':
+        console.log('Testing images.');
+        autosubs.images();
         break;
       case 'wordcount':
         console.log('creates docs that work better for wc.');
@@ -40,6 +40,7 @@ const argv = require("yargs").command(
         break;
       default:
         console.log(`Running all tests, because testname is ${testname}.`);
+        autosubs.images();
     }
 
 
