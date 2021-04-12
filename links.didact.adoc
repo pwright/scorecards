@@ -2,7 +2,7 @@
 
 [.text-center]
 link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/dashboard.act.adoc.didact.adoc[Dashboard]
-// Refresh didactrefresh
+link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/links.didact.adoc[Refresh]
 
 [format="csv", options="header"]
 |===

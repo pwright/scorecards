@@ -1,0 +1,31 @@
+= Dashboard
+
+[.text-center]
+xref::getting-started.adoc[Getting started] 
+link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/dashboard.didact.adoc[Refresh]
+
+[format="csv", separator=";" options="header"]
+|===
+include::win-alt-text.csv[]
+|===
+
+
+[cols="1,1,1"]
+|===
+
+a|.Images
+
+link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/images.act.adoc.didact.adoc[All images]
+
+[format="csv", separator=";" options="header"]
+|===
+include::win-alt-text.csv[]
+|===
+
+|Links 
+|Tables
+
+|Assemblies
+|Keywords
+| 
+|===

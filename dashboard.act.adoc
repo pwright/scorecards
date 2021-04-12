@@ -2,7 +2,10 @@
 
 [.text-center]
 xref::getting-started.adoc[Getting started] 
-link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/dashboard.act.adoc.didact.adoc[Refresh]
+// Refresh didactrefresh
+
+query::win-alt-text.csv[select * from 'images.csv']
+
 
 [cols="1,1,1"]
 |===
@@ -11,7 +14,8 @@ a|.Images
 
 link:didact://?commandId=vscode.didact.startDidact&text=file://{docdir}/images.act.adoc.didact.adoc[All images]
 
-query::select * from images.csv[win-alt-text]
+query::win-alt-text.csv[select * from 'images.csv']
+
 |Links 
 |Tables
 
