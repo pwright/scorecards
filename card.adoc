@@ -1,0 +1,10 @@
+:self: card.adoc
+
+[subs="attributes+"]
+++++
+include::assets/card-start.html[]
+
+include::assets/card1.html[]
+
+include::assets/card-end.html[]
+++++

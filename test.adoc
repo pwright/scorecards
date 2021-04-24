@@ -1,5 +1,0 @@
-++++
-include::start.html[]
-include::cards.adoc[]
-include::end.html[]
-++++

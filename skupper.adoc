@@ -1,8 +1,13 @@
 :self: skupper.adoc
 
+[subs="attributes+"]
 ++++
-include::startTutorial.html[]
+include::assets/plain-start.html[]
 ++++
-include::skup.adoc[]
-//include::end.html[]
+
+// actual tutorial 
+include::assets/skup.adoc[]
+
+++++
+include::assets/plain-end.html[]
 ++++
